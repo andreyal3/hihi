@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>muah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      background-image: url('https://i.pinimg.com/736x/24/c5/77/24c57745d052b78fe3c50698231127b4.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .container {
+      max-width: 90%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #ff5e62;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .cat-container {
+      display: inline-block;
+      width: 30%;
+    }
+    .cat-container:hover img {
+      transform: scale(1.1);
+    }
+    .hidden {
+      display: none;
+    }
+    .apology-button {
+      background-color: #ff5e62;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .apology-button:hover {
+      background-color: #e24b4f;
+    }
+
+    /* Media Queries */
+    @media only screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .cat-container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>I'm Really Sorry</h1>
+    <button class="apology-button" onclick="showApology()">Click to Apologize</button>
+    <div id="apology" class="hidden">
+      <p>My dearest Ely-ziah,</p>
+      <p>I know I've messed up, and I feel awful about it. Please forgive me for my mistakes. I promise to learn from this and be better.</p>
+      <div class="cat-container" onclick="showCat('cat1')">
+        <img src="cat1.jpg" alt="Cat Apology 1">
+      </div>
+      <div class="cat-container" onclick="showCat('cat2')">
+        <img src="cat2.jpg" alt="Cat Apology 2">
+      </div>
+      <div class="cat-container" onclick="showCat('cat3')">
+        <img src="cat3.jfif" alt="Cat Apology 3">
+      </div>
+      <div id="cat1" class="hidden">
+        <p>Let's not let this come between us. You mean everything to me, and I can't bear the thought of losing you.</p>
+      </div>
+      <div id="cat2" class="hidden">
+        <p>Can we please talk and work things out? I miss your smile and the warmth of your presence.</p>
+      </div>
+      <div id="cat3" class="hidden">
+        <p>Again, I'm truly sorry, and I'll do whatever it takes to make it right.</p>
+        <p>With all my love,</p>
+        <p>Al Andrie Pilapil</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    function showApology() {
+      var apologyDiv = document.getElementById("apology");
+      apologyDiv.classList.toggle("hidden");
+    }
+
+    function showCat(catId) {
+      var catDiv = document.getElementById(catId);
+      catDiv.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
